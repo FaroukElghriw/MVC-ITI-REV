@@ -1,3 +1,6 @@
+using Day1.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Day1
 {
     public class Program
@@ -8,7 +11,7 @@ namespace Day1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

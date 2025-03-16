@@ -1,0 +1,13 @@
+﻿@model List<Department>
+<h1>Number Od Deptartment: @Model.Count()</h1>
+
+<select>
+    @foreach (var item in (List<string>)ViewData["branchlist"])
+    {
+        <option>
+            @item
+        </option>
+    }
+</select>
+<h2>@ViewBag.date</h2>
+<h2>@ViewData["date"].ToString()</h2>

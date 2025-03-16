@@ -11,6 +11,10 @@ namespace Day1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSession(C =>
+            {
+                C.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
            
             var app = builder.Build();
 
@@ -24,6 +28,7 @@ namespace Day1
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
